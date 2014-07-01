@@ -3,3 +3,5 @@ dev.db
 staticfiles
 *.pyc
 venvs
+*.egg-info
+*.egg
