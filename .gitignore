@@ -5,3 +5,4 @@ staticfiles
 venvs
 *.egg-info
 *.egg
+settings_local.py

@@ -1,6 +1,20 @@
 import os
 import sys
 
+##
+#
+#  Import settings_local.
+#
+##
+
+try:
+    from settings_local import *
+except ImportError as e:
+    import sys
+    sys.stderr.write("no settings_local found, setting DEBUG=True...\n")
+    DEBUG = True
+    pass
+
 
 def env(name, default=None):
     val = os.environ.get(name)
@@ -18,21 +32,21 @@ PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 #APPS_ROOT = os.path.join(PROJECT_ROOT, 'apps')
 #sys.path.insert(0, os.path.join(APPS_ROOT, 'badgekit_webhooks'))
 
-DEBUG = env('DEBUG')
+# DEBUG = env('DEBUG')
 TEMPLATE_DEBUG = DEBUG
 
-BADGEKIT_SKIP_JWT_AUTH = env('BADGEKIT_SKIP_JWT_AUTH', False)
-BADGEKIT_JWT_KEY = env('BADGEKIT_JWT_KEY')
-BADGEKIT_SEND_CLAIM_EMAILS = env('BADGEKIT_SEND_CLAIM_EMAILS')
+# BADGEKIT_SKIP_JWT_AUTH = env('BADGEKIT_SKIP_JWT_AUTH', False)
+# BADGEKIT_JWT_KEY = env('BADGEKIT_JWT_KEY')
+# BADGEKIT_SEND_CLAIM_EMAILS = env('BADGEKIT_SEND_CLAIM_EMAILS')
 
 
-BADGEKIT_API_URL = env('BADGEKIT_API_URL')
-BADGEKIT_API_KEY = env('BADGEKIT_API_KEY')
-BADGEKIT_SYSTEM = env('BADGEKIT_SYSTEM')
-BADGEKIT_ISSUER = env('BADGEKIT_ISSUER')
-BADGEKIT_PROGRAM = env('BADGEKIT_PROGRAM')
+# BADGEKIT_API_URL = env('BADGEKIT_API_URL')
+# BADGEKIT_API_KEY = env('BADGEKIT_API_KEY')
+# BADGEKIT_SYSTEM = env('BADGEKIT_SYSTEM')
+# BADGEKIT_ISSUER = env('BADGEKIT_ISSUER')
+# BADGEKIT_PROGRAM = env('BADGEKIT_PROGRAM')
 
-ADMINS = [
+# ADMINS = [
     # ("Your Name", "your_email@example.com"),
 ]
 
