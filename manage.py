@@ -2,8 +2,8 @@
 import os, sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hook_project.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mainsite.settings")
     from django.core.management import execute_from_command_line
-    import hook_project.startup as startup
+    import mainsite.startup as startup
     startup.run()
     execute_from_command_line(sys.argv)

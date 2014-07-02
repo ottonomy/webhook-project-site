@@ -155,10 +155,10 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.messages.middleware.MessageMiddleware",
 ]
 
-ROOT_URLCONF = "hook_project.urls"
+ROOT_URLCONF = "mainsite.urls"
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = "hook_project.wsgi.application"
+WSGI_APPLICATION = "mainsite.wsgi.application"
 
 TEMPLATE_DIRS = [
     os.path.join(PACKAGE_ROOT, "templates"),
@@ -183,7 +183,7 @@ INSTALLED_APPS = [
     "metron",
     
     # project
-    "hook_project",
+    "mainsite",
     "badgekit_webhooks",
 ]
 

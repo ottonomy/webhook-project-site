@@ -10,7 +10,7 @@ exit_stat = 0
 
 with open('template.env') as template_env:
     template = template_env.read()
-    with open(os.path.join('hook_project', 'settings.py')) as settings:
+    with open(os.path.join('mainsite', 'settings.py')) as settings:
         settings = settings.read()
         for match in env_re.finditer(settings):
             if match.group(1) not in template:

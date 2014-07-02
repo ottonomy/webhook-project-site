@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT hook_project.wsgi:application
+web: waitress-serve --port=$PORT mainsite.wsgi:application

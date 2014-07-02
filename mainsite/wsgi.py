@@ -15,9 +15,9 @@ framework.
 """
 import os
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hook_project.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mainsite.settings")
 
-import hook_project.startup as startup
+import mainsite.startup as startup
 startup.run()
 
 # This application object is used by any WSGI server configured to use this
